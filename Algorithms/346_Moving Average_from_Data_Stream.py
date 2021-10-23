@@ -17,7 +17,18 @@ movingAverage.next(1); // return 1.0 = 1 / 1
 movingAverage.next(10); // return 5.5 = (1 + 10) / 2
 movingAverage.next(3); // return 4.66667 = (1 + 10 + 3) / 3
 movingAverage.next(5); // return 6.0 = (10 + 3 + 5) / 3
+
+===================================================================================
+The below solution is using the concept of circular queue with array. 
+The benefit of using circular queue is: 
+(1)it would automatically discards the oldest element when addinga new element
+(2)only a single index is required
+
+For the below method, the time complexity is O(1) and the space complexity is O(n).
+The time complexity is consistant as no loop in the next function; the space complexity is decided by the size.
+
 """
+
 class MovingAverage:
 
     def __init__(self, size: int):
