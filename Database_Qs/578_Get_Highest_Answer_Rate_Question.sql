@@ -4,7 +4,7 @@ select question_id as survey_log
 from surveylog
 where answer_id  is not null
 group by question_id
-order by count(1) desc
+order by count(*) desc
 limit 1
 
 
